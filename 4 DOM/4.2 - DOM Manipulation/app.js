@@ -1,6 +1,6 @@
         // //Select the section with an id of container without using querySelector.
-        const contGetElement = document.getElementById("container");
-        console.log(contGetElement);
+        //const contGetElement = document.getElementById("container");
+        //console.log(contGetElement);
         // //Select the section with an id of container using querySelector.
         // const contQuery = document.querySelector("container");
         // //Select all of the list items with a class of “second”.
