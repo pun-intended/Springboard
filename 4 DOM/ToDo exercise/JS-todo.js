@@ -1,24 +1,12 @@
 /*
-Add a new todo (by submitting a form)
-Mark a todo as completed (cross out the text of the todo)
-Remove a todo
+Assignment Specifications:
 
-Now that you have a functioning todo app, save your 
-todos in localStorage! Make sure that when the page
-refreshes, the todos on the page remain there.
-*/
+- Add a new todo (by submitting a form)
+- Mark a todo as completed (cross out the text of the todo)
+- Remove a todo
 
-
-//create .css style sheet
-//create HTML page
-// tie Css, js, html page together
-
-/*
-add new todo
- - create form input
- - turn form input into list item in unordered list
- - add remove button
- - add checkboxes to toggle strikeout
+- save your todos in localStorage
+- Ensure that when the page refreshes, the todos remain
 */
 
 const taskForm = document.querySelector("#taskForm");
