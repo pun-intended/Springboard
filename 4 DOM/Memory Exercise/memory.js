@@ -1,4 +1,9 @@
 /*
+Estimate - 8-12 hours (20-30 poms)
+Poms used - o
+*/
+
+/*
 Expectations:
 - Card based memory game
 - face-down cards that flip when clicked
