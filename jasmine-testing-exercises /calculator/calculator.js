@@ -21,11 +21,19 @@ function getCurrentUIValues() {
 // Put some default values in the inputs
 // Call a function to calculate the current monthly payment
 function setupIntialValues() {
+  let amtInput = document.getElementById("loan-amount");
+  let yrInput = document.getElementById("loan-years"); 
+  let rtInput = document.getElementById("loan-rate"); 
+
+  amtInput.value = 1000;
+  yrInput.value = 10;
+  rtInput.value = 10;
 }
 
 // Get the current values from the UI
 // Update the monthly payment
 function update() {
+
 }
 
 // Given an object of values (a value has amount, years and rate ),
@@ -41,5 +49,6 @@ function calculateMonthlyPayment(values) {
 // Given a string representing the monthly payment value,
 // update the UI to show the value.
 function updateMonthly(monthly) {
-  
+  let monthlyPaymentSpan = document.getElementById("monthly-payment");
+  monthlyPaymentSpan.innerText = monthly;
 }
