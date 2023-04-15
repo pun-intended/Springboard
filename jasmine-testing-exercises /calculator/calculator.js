@@ -33,15 +33,17 @@ function setupIntialValues() {
 // Get the current values from the UI
 // Update the monthly payment
 function update() {
-
+  let loan = getCurrentUIValues();
+  let monthlyPayment = calculateMonthlyPayment(loan);
+  updateMonthly(monthlyPayment);
 }
 
 // Given an object of values (a value has amount, years and rate ),
 // calculate the monthly payment.  The output should be a string
 // that always has 2 decimal places.
 function calculateMonthlyPayment(values) {
-  let numer = (values.amount/(values.rate/12))
-  let denom = 1 - Math.pow((1+values.rate), (values.years*12))
+  let numer = values.amount*(values.rate/12);
+  let denom = 1 - Math.pow((1+values.rate/12), -(values.years*12))
   let payment = numer/denom;
   return payment.toFixed(2);
 }
