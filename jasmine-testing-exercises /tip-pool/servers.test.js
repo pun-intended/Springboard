@@ -52,6 +52,15 @@ describe("updateServerTable test", function(){
   })
 })
 
+/**
+ - Write tests for `appendDeleteBtn(tr)`
+    
+  You may notice the difficulty of simulating a click with vanilla 
+  javascript so do not spend too much time on testing the html after 
+  the DOM is updated (later we will study approaches for this with 
+  other libraries).
+ */
+
 afterEach(function() {
   allServers = {};
   serverId = 0;
