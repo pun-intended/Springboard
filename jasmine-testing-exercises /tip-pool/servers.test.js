@@ -33,24 +33,27 @@ describe("SubmitServerInfo functionality tests", function(){
     populateServerTable();
     expect(serverId).toBe(serverList.length);
   })
-
-  afterEach(function() {
-    allServers = {};
-    serverId = 0;
-
-    updateServerTable();
-  });
 })
+
 describe("updateServerTable test", function(){
+
   it('should append server input to serverTable', function(){
     let testName = 'Terry'
-    serverNameInput.value = testName
+    serverNameInput.value = testName;
+    submitServerInfo();
     updateServerTable();
     expect(serverTbody.rows.length).toEqual(1);
     expect(serverTbody.rows[0].cells[0].innerText).toEqual(testName);
   });
+
   it('should append all inputs to serverTable', function(){
     populateServerTable();
     expect(serverTbody.rows.length).toEqual(serverList.length);
   })
 })
+
+afterEach(function() {
+  allServers = {};
+  serverId = 0;
+  updateServerTable();
+});
