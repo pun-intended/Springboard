@@ -43,7 +43,8 @@ function update() {
 // that always has 2 decimal places.
 function calculateMonthlyPayment(values) {
   if(values.rate == 0){
-    return values.amount/(values.years*12);
+    let payment = values.amount/(values.years*12);
+    return payment.toFixed(2);
   }
   let numer = values.amount*(values.rate/12);
   let denom = 1 - Math.pow((1+values.rate/12), -(values.years*12))
