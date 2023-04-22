@@ -1,8 +1,3 @@
-/*
-Functions to test
-- updateSummary
-    - change in payment data reflected in summary
-*/
 billTestArray = [100, 700, 500];
 tipTestArray = [10, 150, 500];
 
