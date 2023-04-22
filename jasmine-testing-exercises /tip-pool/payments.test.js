@@ -33,7 +33,8 @@ describe('appendPaymentTable testing', function(){
             billAmtInput.value = billTestArray[i];
             tipAmtInput.value = tipTestArray[i];
             submitPaymentInfo();  
-        }      
+        }
+        console.log(sumPaymentTotal('tipPercent'))      
         expect(paymentTbody.lastChild.id).toEqual('payment' + billTestArray.length);
     })
 })
