@@ -38,10 +38,33 @@ describe('sumPaymentTotal testing', function(){
         expect(sumPaymentTotal('tipAmt')).toEqual(tipTotal);
         expect(sumPaymentTotal('tipPercent')).toEqual(tipPercentTotal);
     })
+})
 
+describe('appendTd testing', function(){
+    it('should add the details of the payment to the end of the payment table', function(){
+        exampleText = "test payment"
+        appendTd(paymentTbody, exampleText)
+        expect(paymentTbody.lastChild.innerText).toEqual(exampleText);
+    })
+})
+
+describe('appendDeleteBtn testing', function(){
+    it('should append a delete td to the end of the row', function(){
+        let testData = [100, 10, 10];
+        let tr = document.createElement('tr')
+        for(item in testData){
+            newtd = document.createElement('td');
+            newtd.innerText = item;
+            tr.append(newtd);
+        }
+        appendDeleteBtn(tr);
+        paymentTbody.append(tr);
+        expect(tr.lastChild.innerText).toEqual('X');
+    })
 })
 
 afterEach( function(){
     allPayments = {};
     paymentId = 0;
+    paymentTbody.innerHTML = ""
 });

@@ -24,6 +24,14 @@ function appendTd(tr, value) {
 
   tr.append(newTd);
 }
+
+function appendDeleteBtn(tr){
+  let newTd = document.createElement('td');
+  newTd.innerText = 'X';
+  newTd.id = 'removeTd';
+
+  tr.append(newTd);
+}
 /**
  - Review the functionality of `appendTd(tr, value)`
  - Create a `appendDeleteBtn(tr)`, it will be similar to `append(tr, value)`. 

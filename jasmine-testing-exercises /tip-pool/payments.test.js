@@ -49,7 +49,6 @@ describe('updateSummary testing', function(){
         billTotal = billTestArray.reduce((a, b) => a + b, 0);
         tipTotal = tipTestArray.reduce((a, b) => a + b, 0);
         tipAvg = Math.round(sumPaymentTotal('tipPercent') / Object.keys(allPayments).length);
-        console.log(tipAvg);
         
 
         expect(summaryTds[0].innerHTML).toEqual('$' + billTotal);

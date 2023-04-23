@@ -7,6 +7,15 @@ let allServers = {};
 let serverId = 0;
 
 serverForm.addEventListener('submit', submitServerInfo);
+serverTbody.addEventListener('click', function(event){
+  if(event.target.id == 'removeTd'){
+    parent = event.target.parentElement;
+    if(parent.tagName == 'TR'){
+      parent.remove();
+    }
+  }
+})
+
 
 // create server object and add to allServers, update html and reset input
 function submitServerInfo(evt) {
@@ -38,6 +47,7 @@ function updateServerTable() {
 
     appendTd(newTr, curServer.serverName);
     appendTd(newTr, '$' + tipAverage.toFixed(2));
+    appendDeleteBtn(newTr);
 
     serverTbody.append(newTr);
   }
